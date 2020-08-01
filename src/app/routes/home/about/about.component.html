@@ -1,0 +1,33 @@
+<section id="about">
+  <div class=" about-container" fxLayout="row" fxLayout.xs="column">
+    <div class="background-media" appParallax [ratio]="-0.8" [style.transform]="'translateY(' + scrollTop + 'px)'"></div>
+    <div
+      fxFlex="60"
+      fxFlex.xs="100"
+      fxLayoutAlign="space-around center"
+      fxLayoutAlign.md="space-around center"
+      fxLayoutAlign.xs="space-between center"
+      style="height: 100vh;"
+    >
+      <div class="text-white about-content">
+        <h1 fadeScrollAnimate class="light super" [offset]="10000" style="margin-bottom: 2rem;">
+          {{ header }}
+        </h1>
+        <h3 fadeScrollAnimate class="bigger light" [offset]="10000" style="line-height: 3rem;">
+          {{ subHeader1 }}<br />
+          {{ subHeader2 }}
+        </h3>
+        <app-buttons [firstBtn]="iphone" [secondBtn]="android"></app-buttons>
+      </div>
+    </div>
+    <div
+      fxLayoutAlign="flex-end center"
+      fxLayoutAlign.xs="space-around center"
+      style="height: 100vh"
+    >
+      <div class="about-phone">
+        <img src="/assets/images/phone.png" class="phone-img" moveScrollAnimate [offset]="500" />
+      </div>
+    </div>
+  </div>
+</section>

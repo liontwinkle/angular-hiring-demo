@@ -1,0 +1,13 @@
+<section id="design" class="content-container">
+  <div fxLayout="column" fxLayoutAlign="space-between center">
+    <h2 fadeScrollAnimate>{{ header }}</h2>
+    <div class="divider mt-20 mb-20"></div>
+    <p class="text-center lh-175 lead" fadeScrollAnimate>
+      {{ subHeader1 }}<br />
+      {{ subHeader2 }}
+    </p>
+  </div>
+  <div fxLayout="column" class="image-wrap" fxLayoutAlign="space-between center">
+    <img class="design-image" [src]="phoneImg" moveScrollAnimate [offset]="500" />
+  </div>
+</section>

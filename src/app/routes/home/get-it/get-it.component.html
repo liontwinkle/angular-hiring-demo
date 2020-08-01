@@ -1,0 +1,20 @@
+<section id="get-it">
+  <div fxLayout="column" fxLayoutAlign="space-between center">
+    <h1 class="text-white" fadeScrollAnimate>{{ header }}</h1>
+
+    <div class="divider mt-20"></div>
+    <h2
+      class="text-white light text-center lead"
+      fadeScrollAnimate
+    >
+      {{ subHeader1 }}<br />
+      {{ subHeader2 }}
+    </h2>
+
+    <div fxflex fxFlex="100%" fxFlex.gt-xs="50%" fxLayoutAlign="flex-end center">
+      <app-buttons [firstBtn]="iphone" [secondBtn]="android"></app-buttons>
+    </div>
+    <app-social [social]="socialData"></app-social>
+  </div>
+  <div class="bg-footer"></div>
+</section>

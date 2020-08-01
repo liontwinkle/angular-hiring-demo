@@ -1,0 +1,138 @@
+@import 'src/styles/core/breakpoints.scss';
+.nav-brand {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.navbar {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  @include smobile() {
+    a {
+      color: white !important;
+    }
+  }
+  a {
+    color: white;
+    @include smobile() {
+      font-size: 13px;
+    }
+    @include xl() {
+      font-size: 16px;
+      .mat-icon {
+        font-size: 14px;
+        height: 18px;
+      }
+    }
+  }
+  &.bg-white-animate a {
+    color: #4c4c4c !important;
+    &.active {
+      color: #72b4b6 !important;
+    }
+  }
+  &.bg-white-animate .custom-mat-stroked-button {
+    border-color: #4c4c4c;
+    &.active {
+      border-color: #72b4b6 !important;
+    }
+  }
+  .custom-mat-stroked-button {
+    border-color: white;
+    padding: 0 20px;
+  }
+  .mat-toolbar {
+    @include md() {
+      width: 750px;
+    }
+    @include lg() {
+      width: 970px;
+    }
+    @include xxl() {
+      width: 76%;
+    }
+    @include xxxl() {
+      width: 1170px
+    }
+  }
+}
+
+.bg-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, .9);
+  &.fade-in {
+    opacity: 1;
+  }
+  &.fade-out {
+    opacity: 0;
+  }
+}
+
+.underscore-none {
+  text-decoration: none;
+}
+
+#mobile-menu {
+  position: absolute;
+  top: 100px;
+  background: #fff;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  li {
+    list-style: none;
+    a {
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 400;
+      cursor: pointer;
+      &:hover {
+        color: #72b4b6 !important;
+      }
+    }
+  }
+}
+
+.navbar-toggle {
+  .icon-bar {
+    height: 1px;
+    width: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 12px;
+    margin-top: 0!important;
+    transition: all .3s;
+    background-color: #4c4c4c;
+    &:nth-child(2) {
+      top: 18px;
+    }
+    &:nth-child(3) {
+      top: 24px;
+    }
+  }
+  &.open {
+    .icon-bar {
+      &:nth-child(2) {
+        background: transparent;
+      }
+      &:nth-child(1) {
+        transform: rotate(-45deg);
+        left: 8px;
+        top: auto;
+      }
+      &:nth-child(3) {
+        transform: rotate(45deg);
+        left: 8px;
+        top: unset;
+      }
+    }
+  }
+}
